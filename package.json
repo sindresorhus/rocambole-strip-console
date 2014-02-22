@@ -1,6 +1,6 @@
 {
   "name": "rocambole-strip-console",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Strip console statements from a rocambole AST",
   "license": "MIT",
   "repository": "sindresorhus/rocambole-strip-console",
