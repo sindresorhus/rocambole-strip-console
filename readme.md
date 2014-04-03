@@ -1,16 +1,16 @@
-# rocambole-strip-console [![Build Status](https://travis-ci.org/sindresorhus/rocambole-strip-console.png?branch=master)](https://travis-ci.org/sindresorhus/rocambole-strip-console)
+# rocambole-strip-console [![Build Status](https://travis-ci.org/sindresorhus/rocambole-strip-console.svg?branch=master)](https://travis-ci.org/sindresorhus/rocambole-strip-console)
 
 > Strip console statements from a [rocambole](https://github.com/millermedeiros/rocambole) AST
 
 
 ## Install
 
-```
-npm install --save rocambole-strip-console
+```bash
+$ npm install --save rocambole-strip-console
 ```
 
 
-## Example
+## Usage
 
 ```js
 var rocambole = require('rocambole');
@@ -27,4 +27,4 @@ To prevent any side-effects, `console.*` is replaced with `void 0` instead of be
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
