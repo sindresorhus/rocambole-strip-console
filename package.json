@@ -36,10 +36,10 @@
     "esprima"
   ],
   "dependencies": {
-    "rocambole-node-update": "^0.1.0"
+    "rocambole-node-update": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "rocambole": "^0.3.2"
+    "rocambole": "^0.3.6"
   }
 }

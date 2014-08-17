@@ -5,7 +5,7 @@
 
 ## Install
 
-```bash
+```sh
 $ npm install --save rocambole-strip-console
 ```
 
@@ -27,4 +27,4 @@ To prevent any side-effects, `console.*` is replaced with `void 0` instead of be
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)

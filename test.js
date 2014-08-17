@@ -1,7 +1,7 @@
 'use strict';
 var assert = require('assert');
 var rocambole = require('rocambole');
-var stripConsole = require('./index');
+var stripConsole = require('./');
 
 function strip(str) {
 	return rocambole.moonwalk(str, function (node) {
