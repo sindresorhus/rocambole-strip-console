@@ -1,24 +1,23 @@
-'use strict';
-var assert = require('assert');
-var rocambole = require('rocambole');
-var stripConsole = require('./');
+import test from 'ava';
+import rocambole from 'rocambole';
+import m from '.';
 
-function strip(str) {
-	return rocambole.moonwalk(str, function (node) {
-			stripConsole(node);
+function strip(string) {
+	return rocambole.moonwalk(string, node => {
+		m(node);
 	}).toString();
 }
 
-it('should strip console statement', function () {
-	assert.equal(strip('function test(){console.log("foo");}'), 'function test(){void 0;}');
-	assert.equal(strip('function test(){window.console.log("foo");}'), 'function test(){void 0;}');
-	assert.equal(strip('"use strict";console.log("foo");foo()'), '"use strict";void 0;foo()');
-	assert.equal(strip('if(console){console.log("foo", "bar");}'), 'if(console){void 0;}');
-	assert.equal(strip('foo && console.log("foo");'), 'foo && void 0;');
-	assert.equal(strip('if (foo) console.log("foo")\nnextLine();'), 'if (foo) void 0\nnextLine();');
+test('strip console statement', t => {
+	t.is(strip('function test(){console.log("foo");}'), 'function test(){void 0;}');
+	t.is(strip('function test(){window.console.log("foo");}'), 'function test(){void 0;}');
+	t.is(strip('"use strict";console.log("foo");foo()'), '"use strict";void 0;foo()');
+	t.is(strip('if(console){console.log("foo", "bar");}'), 'if(console){void 0;}');
+	t.is(strip('foo && console.log("foo");'), 'foo && void 0;');
+	t.is(strip('if (foo) console.log("foo")\nnextLine();'), 'if (foo) void 0\nnextLine();');
 });
 
-it('should never strip away non-debugging code', function () {
-	var t = 'var test = {\n    getReadSections: function(){\n        var readSections = window.localStorage.getItem(\'storyReadSections\') || \'[]\';\n        return JSON.parse(readSections);\n    }\n};';
-	assert.equal(strip(t), t);
+test('never strip away non-debugging code', t => {
+	const fixture = 'var test = {\n    getReadSections: function(){\n        var readSections = window.localStorage.getItem(\'storyReadSections\') || \'[]\';\n        return JSON.parse(readSections);\n    }\n};';
+	t.is(strip(fixture), fixture);
 });

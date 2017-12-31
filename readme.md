@@ -1,12 +1,12 @@
 # rocambole-strip-console [![Build Status](https://travis-ci.org/sindresorhus/rocambole-strip-console.svg?branch=master)](https://travis-ci.org/sindresorhus/rocambole-strip-console)
 
-> Strip console statements from a [rocambole](https://github.com/millermedeiros/rocambole) AST
+> Strip console statements from a [`rocambole`](https://github.com/millermedeiros/rocambole) AST
 
 
 ## Install
 
 ```
-$ npm install --save rocambole-strip-console
+$ npm install rocambole-strip-console
 ```
 
 
@@ -27,4 +27,4 @@ To prevent any side-effects, `console.*` is replaced with `void 0` instead of be
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
