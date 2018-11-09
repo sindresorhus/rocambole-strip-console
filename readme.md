@@ -1,3 +1,9 @@
+# Deprecated
+
+The Rocambole project is no longer maintained.
+
+---
+
 # rocambole-strip-console [![Build Status](https://travis-ci.org/sindresorhus/rocambole-strip-console.svg?branch=master)](https://travis-ci.org/sindresorhus/rocambole-strip-console)
 
 > Strip console statements from a [`rocambole`](https://github.com/millermedeiros/rocambole) AST
